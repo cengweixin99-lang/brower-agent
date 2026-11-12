@@ -1,0 +1,14 @@
+{
+  "name": "@pba/browser",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "scripts": {
+    "smoke": "node ../../scripts/browser.mjs smoke"
+  },
+  "dependencies": {
+    "playwright": "1.65.0",
+    "@pba/contracts": "workspace:*"
+  }
+}

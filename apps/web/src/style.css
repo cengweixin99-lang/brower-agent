@@ -1,0 +1,44 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #17252a;
+  background: #f4f6f5;
+  line-height: 1.6;
+}
+body {
+  margin: 0;
+}
+main {
+  max-width: 850px;
+  margin: 64px auto;
+  padding: 0 24px;
+}
+h1 {
+  font-size: clamp(32px, 6vw, 48px);
+  line-height: 1.2;
+  margin: 12px 0;
+}
+h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #52716a;
+}
+section {
+  padding: 24px;
+  margin-top: 24px;
+  background: #fff;
+  border: 1px solid #dce4e0;
+  border-radius: 12px;
+}
+li {
+  margin: 10px 0;
+}
+a {
+  color: #246557;
+}
+code {
+  overflow-wrap: anywhere;
+}

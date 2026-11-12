@@ -1,0 +1,15 @@
+{
+  "name": "@pba/agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@earendil-works/pi-agent-core": "1.5.1",
+    "@earendil-works/pi-ai": "1.5.1",
+    "@pba/contracts": "workspace:*"
+  },
+  "scripts": {
+    "smoke": "node scripts/smoke.ts"
+  }
+}
