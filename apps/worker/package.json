@@ -1,0 +1,20 @@
+{
+  "name": "@pba/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file=../../.env --watch src/main.ts",
+    "start": "node --env-file=../../.env src/main.ts",
+    "smoke:infra": "node --env-file=../../.env scripts/smoke-infra.ts",
+    "smoke:workflow": "node --env-file=../../.env scripts/smoke-workflow.ts"
+  },
+  "dependencies": {
+    "@temporalio/client": "1.25.0",
+    "@temporalio/worker": "1.25.0",
+    "@temporalio/workflow": "1.25.0",
+    "@pba/agent": "workspace:*",
+    "@pba/contracts": "workspace:*",
+    "@pba/persistence": "workspace:*"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "pi-browser-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24.12.0 <25",
+    "pnpm": "11.25.0"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter @pba/api --filter @pba/web --filter @pba/worker --filter @pba/browser-worker run dev",
+    "dev:api": "pnpm --filter @pba/api dev",
+    "dev:web": "pnpm --filter @pba/web dev",
+    "dev:worker": "pnpm --filter @pba/worker dev",
+    "dev:browser": "pnpm --filter @pba/browser-worker dev",
+    "check": "pnpm check:deps && biome check . && tsc --noEmit",
+    "check:deps": "node scripts/check-deps.mjs",
+    "format": "biome check --write .",
+    "env:init": "node scripts/init-env.mjs",
+    "infra:up": "docker compose --env-file .env -f infra/local/compose.yaml up -d --wait",
+    "infra:down": "docker compose --env-file .env -f infra/local/compose.yaml down",
+    "infra:status": "docker compose --env-file .env -f infra/local/compose.yaml ps",
+    "browser:install": "node scripts/browser.mjs install",
+    "smoke:browser": "node scripts/browser.mjs smoke",
+    "smoke:infra": "pnpm --filter @pba/worker smoke:infra",
+    "smoke:workflow": "pnpm --filter @pba/worker smoke:workflow",
+    "smoke:http": "node scripts/smoke-http.mjs",
+    "smoke:pi": "pnpm --filter @pba/agent smoke",
+    "smoke:web": "node scripts/browser.mjs smoke-web"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.6",
+    "@types/node": "24.10.0",
+    "typescript": "7.0.2"
+  }
+}

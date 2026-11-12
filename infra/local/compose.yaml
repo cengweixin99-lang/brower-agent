@@ -1,0 +1,60 @@
+name: pi-browser-agent
+
+services:
+  postgres:
+    image: postgres:17-alpine@sha256:e5d2edd28b1f8d40a0a6c0c9cdc545b19b56a0d5d88f94bc11a97d970d4700d0
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?Run pnpm env:init}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run pnpm env:init}
+      POSTGRES_DB: ${POSTGRES_DB:?Run pnpm env:init}
+    ports:
+      - "127.0.0.1:55433:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  temporal-volume-init:
+    image: temporalio/temporal@sha256:003508da05989e7cf0d583cfce521c4bb2732e733574e3040db8f1284783baa2
+    user: "0:0"
+    entrypoint: ["chown", "temporal:temporal", "/var/lib/temporal"]
+    volumes:
+      - temporal-data:/var/lib/temporal
+
+  temporal:
+    depends_on:
+      temporal-volume-init:
+        condition: service_completed_successfully
+    image: temporalio/temporal@sha256:003508da05989e7cf0d583cfce521c4bb2732e733574e3040db8f1284783baa2
+    command:
+      [
+        "server",
+        "start-dev",
+        "--ip",
+        "0.0.0.0",
+        "--ui-ip",
+        "0.0.0.0",
+        "--ui-port",
+        "8233",
+        "--ui-disable-news-fetch",
+        "--db-filename",
+        "/var/lib/temporal/temporal.db",
+      ]
+    ports:
+      - "127.0.0.1:7233:7233"
+      - "127.0.0.1:8233:8233"
+    volumes:
+      - temporal-data:/var/lib/temporal
+    healthcheck:
+      test: ["CMD", "temporal", "operator", "cluster", "health", "--address", "127.0.0.1:7233"]
+      interval: 5s
+      timeout: 5s
+      start_period: 10s
+      retries: 20
+
+volumes:
+  postgres-data:
+  temporal-data:
