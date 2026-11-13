@@ -1,0 +1,328 @@
+{
+  "fileKey": "gOulaRv0q2wSX5OVD0dIVo",
+  "sourceUrl": "https://www.figma.com/design/gOulaRv0q2wSX5OVD0dIVo/Untitled?node-id=0-1",
+  "readDate": "2026-11-12",
+  "coverage": "partial",
+  "capturedFrameIds": ["5:2", "5:5", "5:8", "5:11", "8:235"],
+  "capturedNodeCount": 1275,
+  "capturedReactionActionCount": 42,
+  "blocker": "Figma MCP Starter plan tool call limit reached; remaining 46 frames have inventory only.",
+  "page": {
+    "id": "0:1",
+    "name": "Page 1",
+    "flowStartingPoints": [
+      {
+        "nodeId": "8:235",
+        "name": "Browse Agent · Complete task flow"
+      }
+    ]
+  },
+  "frames": [
+    {
+      "id": "5:2",
+      "name": "01 · New task",
+      "type": "FRAME",
+      "descendantCount": 190
+    },
+    {
+      "id": "5:5",
+      "name": "02 · Agent workspace",
+      "type": "FRAME",
+      "descendantCount": 320
+    },
+    {
+      "id": "5:8",
+      "name": "03 · Task history",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "5:11",
+      "name": "Browse Agent · Components",
+      "type": "FRAME",
+      "descendantCount": 258
+    },
+    {
+      "id": "8:235",
+      "name": "Prototype · 00 New task",
+      "type": "FRAME",
+      "descendantCount": 190
+    },
+    {
+      "id": "8:348",
+      "name": "Prototype · 01 Thinking",
+      "type": "FRAME",
+      "descendantCount": 225
+    },
+    {
+      "id": "8:597",
+      "name": "Prototype · 02 Searching",
+      "type": "FRAME",
+      "descendantCount": 225
+    },
+    {
+      "id": "8:846",
+      "name": "Prototype · 03 Browsing",
+      "type": "FRAME",
+      "descendantCount": 319
+    },
+    {
+      "id": "8:1095",
+      "name": "Prototype · 04 Tool call / Asana",
+      "type": "FRAME",
+      "descendantCount": 260
+    },
+    {
+      "id": "8:1335",
+      "name": "Prototype · 04 Tool call / Notion",
+      "type": "FRAME",
+      "descendantCount": 260
+    },
+    {
+      "id": "8:1575",
+      "name": "Prototype · Paused / 01 Thinking",
+      "type": "FRAME",
+      "descendantCount": 226
+    },
+    {
+      "id": "8:1825",
+      "name": "Prototype · Paused / 02 Searching",
+      "type": "FRAME",
+      "descendantCount": 226
+    },
+    {
+      "id": "8:2075",
+      "name": "Prototype · Paused / 03 Browsing",
+      "type": "FRAME",
+      "descendantCount": 320
+    },
+    {
+      "id": "8:2325",
+      "name": "Prototype · Paused / Agent workspace",
+      "type": "FRAME",
+      "descendantCount": 321
+    },
+    {
+      "id": "8:2574",
+      "name": "Prototype · Paused / 04 Tool call / Asana",
+      "type": "FRAME",
+      "descendantCount": 259
+    },
+    {
+      "id": "8:2823",
+      "name": "Prototype · Paused / 04 Tool call / Notion",
+      "type": "FRAME",
+      "descendantCount": 259
+    },
+    {
+      "id": "8:3072",
+      "name": "Prototype · 05 Awaiting approval",
+      "type": "FRAME",
+      "descendantCount": 183
+    },
+    {
+      "id": "8:3312",
+      "name": "Prototype · 06 Completed / Published",
+      "type": "FRAME",
+      "descendantCount": 160
+    },
+    {
+      "id": "8:3552",
+      "name": "Prototype · 06 Completed / Kept locally",
+      "type": "FRAME",
+      "descendantCount": 162
+    },
+    {
+      "id": "8:3792",
+      "name": "Prototype · Stopped",
+      "type": "FRAME",
+      "descendantCount": 320
+    },
+    {
+      "id": "8:5552",
+      "name": "04 · Browser sessions",
+      "type": "FRAME",
+      "descendantCount": 113
+    },
+    {
+      "id": "8:6167",
+      "name": "Prototype · History / Thinking",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "8:6393",
+      "name": "Prototype · Sessions / Thinking",
+      "type": "FRAME",
+      "descendantCount": 113
+    },
+    {
+      "id": "8:6433",
+      "name": "Prototype · History / Searching",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "8:6659",
+      "name": "Prototype · Sessions / Searching",
+      "type": "FRAME",
+      "descendantCount": 113
+    },
+    {
+      "id": "8:6699",
+      "name": "Prototype · History / Browsing",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "8:6925",
+      "name": "Prototype · Sessions / Browsing",
+      "type": "FRAME",
+      "descendantCount": 113
+    },
+    {
+      "id": "8:6965",
+      "name": "Prototype · History / Tool call / Asana",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "8:7191",
+      "name": "Prototype · Sessions / Tool call / Asana",
+      "type": "FRAME",
+      "descendantCount": 113
+    },
+    {
+      "id": "8:7231",
+      "name": "Prototype · History / Tool call / Notion",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "8:7457",
+      "name": "Prototype · Sessions / Tool call / Notion",
+      "type": "FRAME",
+      "descendantCount": 113
+    },
+    {
+      "id": "8:7497",
+      "name": "Prototype · History / Paused thinking",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "8:7723",
+      "name": "Prototype · Sessions / Paused thinking",
+      "type": "FRAME",
+      "descendantCount": 113
+    },
+    {
+      "id": "8:7763",
+      "name": "Prototype · History / Paused searching",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "8:7989",
+      "name": "Prototype · Sessions / Paused searching",
+      "type": "FRAME",
+      "descendantCount": 113
+    },
+    {
+      "id": "8:8029",
+      "name": "Prototype · History / Paused browsing",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "8:8255",
+      "name": "Prototype · Sessions / Paused browsing",
+      "type": "FRAME",
+      "descendantCount": 113
+    },
+    {
+      "id": "8:8295",
+      "name": "Prototype · History / Paused Linear",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "8:8521",
+      "name": "Prototype · Sessions / Paused Linear",
+      "type": "FRAME",
+      "descendantCount": 113
+    },
+    {
+      "id": "8:8561",
+      "name": "Prototype · History / Paused Asana",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "8:8787",
+      "name": "Prototype · Sessions / Paused Asana",
+      "type": "FRAME",
+      "descendantCount": 113
+    },
+    {
+      "id": "8:8827",
+      "name": "Prototype · History / Paused Notion",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "8:9053",
+      "name": "Prototype · Sessions / Paused Notion",
+      "type": "FRAME",
+      "descendantCount": 113
+    },
+    {
+      "id": "8:9093",
+      "name": "Prototype · History / Approval",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "8:9319",
+      "name": "Prototype · Sessions / Approval",
+      "type": "FRAME",
+      "descendantCount": 113
+    },
+    {
+      "id": "8:9359",
+      "name": "Prototype · History / Completed and published",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "8:9585",
+      "name": "Prototype · Sessions / Completed and published",
+      "type": "FRAME",
+      "descendantCount": 113
+    },
+    {
+      "id": "8:9625",
+      "name": "Prototype · History / Completed locally",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "8:9851",
+      "name": "Prototype · Sessions / Completed locally",
+      "type": "FRAME",
+      "descendantCount": 113
+    },
+    {
+      "id": "8:9891",
+      "name": "Prototype · History / Stopped",
+      "type": "FRAME",
+      "descendantCount": 312
+    },
+    {
+      "id": "8:10117",
+      "name": "Prototype · Sessions / Stopped",
+      "type": "FRAME",
+      "descendantCount": 113
+    }
+  ]
+}

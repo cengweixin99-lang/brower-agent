@@ -9,6 +9,9 @@
   },
   "dependencies": {
     "fastify": "5.12.8",
-    "@pba/contracts": "workspace:*"
+    "@pba/contracts": "workspace:*",
+    "@pba/agent": "workspace:*",
+    "@pba/persistence": "workspace:*",
+    "@temporalio/client": "1.25.0"
   }
 }

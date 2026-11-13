@@ -1,0 +1,1058 @@
+{
+  "sourceFileKey": "gOulaRv0q2wSX5OVD0dIVo",
+  "readDate": "2026-11-12",
+  "coverage": "partial",
+  "capturedFrameIds": ["5:2", "5:5", "5:8", "5:11", "8:235"],
+  "knownTopLevelFrameCount": 51,
+  "capturedNodeCount": 1275,
+  "reactionCount": 42,
+  "edges": [
+    {
+      "sourceFrameId": "5:2",
+      "sourceFrameName": "01 · New task",
+      "sourceNodeId": "5:2",
+      "sourceNodeName": "01 · New task",
+      "sourceBox": [-590, -510, 1440, 1000],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_KEY_DOWN",
+        "device": "KEYBOARD",
+        "keyCodes": [91, 13]
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:348",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false
+      },
+      "destinationName": "Prototype · 01 Thinking",
+      "destinationPropertiesCaptured": false
+    },
+    {
+      "sourceFrameId": "5:2",
+      "sourceFrameName": "01 · New task",
+      "sourceNodeId": "5:731",
+      "sourceNodeName": "Button / Run Task",
+      "sourceBox": [738, 152, 152, 38],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:348",
+        "navigation": "NAVIGATE",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.15000000596046448
+        },
+        "resetVideoPosition": false,
+        "resetScrollPosition": true
+      },
+      "destinationName": "Prototype · 01 Thinking",
+      "destinationPropertiesCaptured": false
+    },
+    {
+      "sourceFrameId": "5:2",
+      "sourceFrameName": "01 · New task",
+      "sourceNodeId": "5:779",
+      "sourceNodeName": "View all tasks",
+      "sourceBox": [965, 708, 76, 17],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:8",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "03 · Task history",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:2",
+      "sourceFrameName": "01 · New task",
+      "sourceNodeId": "5:786",
+      "sourceNodeName": "Research project management tools",
+      "sourceBox": [189, 756, 204, 17],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:5",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "02 · Agent workspace",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:2",
+      "sourceFrameName": "01 · New task",
+      "sourceNodeId": "8:10639",
+      "sourceNodeName": "Navigate / New task",
+      "sourceBox": [12, 144, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:235",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "Prototype · 00 New task",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:2",
+      "sourceFrameName": "01 · New task",
+      "sourceNodeId": "8:10641",
+      "sourceNodeName": "Navigate / All tasks",
+      "sourceBox": [12, 186, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:8",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "03 · Task history",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:2",
+      "sourceFrameName": "01 · New task",
+      "sourceNodeId": "8:10643",
+      "sourceNodeName": "Navigate / Recent tasks",
+      "sourceBox": [12, 228, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:8",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "03 · Task history",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:2",
+      "sourceFrameName": "01 · New task",
+      "sourceNodeId": "8:10645",
+      "sourceNodeName": "Navigate / History",
+      "sourceBox": [12, 354, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:8",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "03 · Task history",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:2",
+      "sourceFrameName": "01 · New task",
+      "sourceNodeId": "8:10647",
+      "sourceNodeName": "Navigate / Browser sessions",
+      "sourceBox": [12, 312, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:5552",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "04 · Browser sessions",
+      "destinationPropertiesCaptured": false
+    },
+    {
+      "sourceFrameId": "5:2",
+      "sourceFrameName": "01 · New task",
+      "sourceNodeId": "8:10649",
+      "sourceNodeName": "Return to current task",
+      "sourceBox": [12, 458, 196, 68],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:5",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "02 · Agent workspace",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:5",
+      "sourceFrameName": "02 · Agent workspace",
+      "sourceNodeId": "5:5",
+      "sourceNodeName": "02 · Agent workspace",
+      "sourceBox": [946, -510, 1440, 1000],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "AFTER_TIMEOUT",
+        "timeout": 12
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:3072",
+        "navigation": "NAVIGATE",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.15000000596046448
+        },
+        "resetVideoPosition": false,
+        "resetScrollPosition": true
+      },
+      "destinationName": "Prototype · 05 Awaiting approval",
+      "destinationPropertiesCaptured": false
+    },
+    {
+      "sourceFrameId": "5:5",
+      "sourceFrameName": "02 · Agent workspace",
+      "sourceNodeId": "5:472",
+      "sourceNodeName": "Button / Pause",
+      "sourceBox": [904, 23, 136, 38],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:2325",
+        "navigation": "NAVIGATE",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.15000000596046448
+        },
+        "resetVideoPosition": false,
+        "resetScrollPosition": true
+      },
+      "destinationName": "Prototype · Paused / Agent workspace",
+      "destinationPropertiesCaptured": false
+    },
+    {
+      "sourceFrameId": "5:5",
+      "sourceFrameName": "02 · Agent workspace",
+      "sourceNodeId": "5:476",
+      "sourceNodeName": "Button / Stop",
+      "sourceBox": [1052, 23, 144, 38],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:3792",
+        "navigation": "NAVIGATE",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.15000000596046448
+        },
+        "resetVideoPosition": false,
+        "resetScrollPosition": true
+      },
+      "destinationName": "Prototype · Stopped",
+      "destinationPropertiesCaptured": false
+    },
+    {
+      "sourceFrameId": "5:5",
+      "sourceFrameName": "02 · Agent workspace",
+      "sourceNodeId": "8:6122",
+      "sourceNodeName": "Switch tab / Asana",
+      "sourceBox": [234, 57, 174, 33],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:1095",
+        "navigation": "NAVIGATE",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.11999999731779099
+        },
+        "resetVideoPosition": false,
+        "resetScrollPosition": true
+      },
+      "destinationName": "Prototype · 04 Tool call / Asana",
+      "destinationPropertiesCaptured": false
+    },
+    {
+      "sourceFrameId": "5:5",
+      "sourceFrameName": "02 · Agent workspace",
+      "sourceNodeId": "8:6124",
+      "sourceNodeName": "Switch tab / Notion",
+      "sourceBox": [413, 57, 174, 33],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:1335",
+        "navigation": "NAVIGATE",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.11999999731779099
+        },
+        "resetVideoPosition": false,
+        "resetScrollPosition": true
+      },
+      "destinationName": "Prototype · 04 Tool call / Notion",
+      "destinationPropertiesCaptured": false
+    },
+    {
+      "sourceFrameId": "5:5",
+      "sourceFrameName": "02 · Agent workspace",
+      "sourceNodeId": "8:10157",
+      "sourceNodeName": "Navigate / New task",
+      "sourceBox": [12, 144, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:235",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "Prototype · 00 New task",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:5",
+      "sourceFrameName": "02 · Agent workspace",
+      "sourceNodeId": "8:10159",
+      "sourceNodeName": "Navigate / All tasks",
+      "sourceBox": [12, 186, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:8",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "03 · Task history",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:5",
+      "sourceFrameName": "02 · Agent workspace",
+      "sourceNodeId": "8:10161",
+      "sourceNodeName": "Navigate / Recent tasks",
+      "sourceBox": [12, 228, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:8",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "03 · Task history",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:5",
+      "sourceFrameName": "02 · Agent workspace",
+      "sourceNodeId": "8:10163",
+      "sourceNodeName": "Navigate / History",
+      "sourceBox": [12, 354, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:8",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "03 · Task history",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:5",
+      "sourceFrameName": "02 · Agent workspace",
+      "sourceNodeId": "8:10165",
+      "sourceNodeName": "Navigate / Browser sessions",
+      "sourceBox": [12, 312, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:5552",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "04 · Browser sessions",
+      "destinationPropertiesCaptured": false
+    },
+    {
+      "sourceFrameId": "5:8",
+      "sourceFrameName": "03 · Task history",
+      "sourceNodeId": "5:827",
+      "sourceNodeName": "New task button",
+      "sourceBox": [1080, 28, 116, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:235",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "Prototype · 00 New task",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:8",
+      "sourceFrameName": "03 · Task history",
+      "sourceNodeId": "5:867",
+      "sourceNodeName": "Task record / Research project management tools",
+      "sourceBox": [0, 40, 790, 66],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:5",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "02 · Agent workspace",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:8",
+      "sourceFrameName": "03 · Task history",
+      "sourceNodeId": "8:10167",
+      "sourceNodeName": "Navigate / New task",
+      "sourceBox": [12, 144, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:235",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "Prototype · 00 New task",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:8",
+      "sourceFrameName": "03 · Task history",
+      "sourceNodeId": "8:10169",
+      "sourceNodeName": "Navigate / Browser sessions",
+      "sourceBox": [12, 312, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:5552",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "04 · Browser sessions",
+      "destinationPropertiesCaptured": false
+    },
+    {
+      "sourceFrameId": "5:8",
+      "sourceFrameName": "03 · Task history",
+      "sourceNodeId": "8:10171",
+      "sourceNodeName": "Return to current task",
+      "sourceBox": [12, 458, 196, 68],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:5",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "02 · Agent workspace",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:11",
+      "sourceFrameName": "Browse Agent · Components",
+      "sourceNodeId": "8:6150",
+      "sourceNodeName": "Resume session",
+      "sourceBox": [979, 58, 169, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:6152",
+        "navigation": "CHANGE_TO",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.11999999731779099
+        },
+        "resetVideoPosition": false
+      },
+      "destinationName": "State=Connected",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "5:11",
+      "sourceFrameName": "Browse Agent · Components",
+      "sourceNodeId": "8:6156",
+      "sourceNodeName": "Stop session",
+      "sourceBox": [979, 58, 169, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:6146",
+        "navigation": "CHANGE_TO",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.11999999731779099
+        },
+        "resetVideoPosition": false
+      },
+      "destinationName": "State=Stopped",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "8:235",
+      "sourceFrameName": "Prototype · 00 New task",
+      "sourceNodeId": "8:235",
+      "sourceNodeName": "Prototype · 00 New task",
+      "sourceBox": [4018, -510, 1440, 1000],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_KEY_DOWN",
+        "device": "KEYBOARD",
+        "keyCodes": [13]
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:2",
+        "navigation": "NAVIGATE",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.15000000596046448
+        },
+        "resetVideoPosition": false,
+        "resetScrollPosition": true
+      },
+      "destinationName": "01 · New task",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "8:235",
+      "sourceFrameName": "Prototype · 00 New task",
+      "sourceNodeId": "8:264",
+      "sourceNodeName": "Button / Run Task",
+      "sourceBox": [738, 152, 152, 38],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:2",
+        "navigation": "NAVIGATE",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.15000000596046448
+        },
+        "resetVideoPosition": false,
+        "resetScrollPosition": true
+      },
+      "destinationName": "01 · New task",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "8:235",
+      "sourceFrameName": "Prototype · 00 New task",
+      "sourceNodeId": "8:268",
+      "sourceNodeName": "Template / Research competitors",
+      "sourceBox": [154, 548, 172, 109],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:2",
+        "navigation": "NAVIGATE",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.15000000596046448
+        },
+        "resetVideoPosition": false,
+        "resetScrollPosition": true
+      },
+      "destinationName": "01 · New task",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "8:235",
+      "sourceFrameName": "Prototype · 00 New task",
+      "sourceNodeId": "8:276",
+      "sourceNodeName": "Template / Compare products",
+      "sourceBox": [339, 548, 172, 109],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:2",
+        "navigation": "NAVIGATE",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.15000000596046448
+        },
+        "resetVideoPosition": false,
+        "resetScrollPosition": true
+      },
+      "destinationName": "01 · New task",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "8:235",
+      "sourceFrameName": "Prototype · 00 New task",
+      "sourceNodeId": "8:285",
+      "sourceNodeName": "Template / Extract website data",
+      "sourceBox": [524, 548, 172, 109],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:2",
+        "navigation": "NAVIGATE",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.15000000596046448
+        },
+        "resetVideoPosition": false,
+        "resetScrollPosition": true
+      },
+      "destinationName": "01 · New task",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "8:235",
+      "sourceFrameName": "Prototype · 00 New task",
+      "sourceNodeId": "8:293",
+      "sourceNodeName": "Template / Fill out web forms",
+      "sourceBox": [709, 548, 172, 109],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:2",
+        "navigation": "NAVIGATE",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.15000000596046448
+        },
+        "resetVideoPosition": false,
+        "resetScrollPosition": true
+      },
+      "destinationName": "01 · New task",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "8:235",
+      "sourceFrameName": "Prototype · 00 New task",
+      "sourceNodeId": "8:301",
+      "sourceNodeName": "Template / Summarize articles",
+      "sourceBox": [894, 548, 172, 109],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:2",
+        "navigation": "NAVIGATE",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.15000000596046448
+        },
+        "resetVideoPosition": false,
+        "resetScrollPosition": true
+      },
+      "destinationName": "01 · New task",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "8:235",
+      "sourceFrameName": "Prototype · 00 New task",
+      "sourceNodeId": "8:309",
+      "sourceNodeName": "View all tasks",
+      "sourceBox": [965, 708, 76, 17],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:8",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "03 · Task history",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "8:235",
+      "sourceFrameName": "Prototype · 00 New task",
+      "sourceNodeId": "8:316",
+      "sourceNodeName": "Research project management tools",
+      "sourceBox": [189, 756, 204, 17],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:5",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "02 · Agent workspace",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "8:235",
+      "sourceFrameName": "Prototype · 00 New task",
+      "sourceNodeId": "8:6076",
+      "sourceNodeName": "Enter sample task",
+      "sourceBox": [374, 311, 912, 139],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:2",
+        "navigation": "NAVIGATE",
+        "transition": {
+          "type": "DISSOLVE",
+          "easing": {
+            "type": "EASE_OUT"
+          },
+          "duration": 0.15000000596046448
+        },
+        "resetVideoPosition": false,
+        "resetScrollPosition": true
+      },
+      "destinationName": "01 · New task",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "8:235",
+      "sourceFrameName": "Prototype · 00 New task",
+      "sourceNodeId": "8:10653",
+      "sourceNodeName": "Navigate / All tasks",
+      "sourceBox": [12, 186, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:8",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "03 · Task history",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "8:235",
+      "sourceFrameName": "Prototype · 00 New task",
+      "sourceNodeId": "8:10655",
+      "sourceNodeName": "Navigate / Recent tasks",
+      "sourceBox": [12, 228, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:8",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "03 · Task history",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "8:235",
+      "sourceFrameName": "Prototype · 00 New task",
+      "sourceNodeId": "8:10657",
+      "sourceNodeName": "Navigate / History",
+      "sourceBox": [12, 354, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:8",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "03 · Task history",
+      "destinationPropertiesCaptured": true
+    },
+    {
+      "sourceFrameId": "8:235",
+      "sourceFrameName": "Prototype · 00 New task",
+      "sourceNodeId": "8:10659",
+      "sourceNodeName": "Navigate / Browser sessions",
+      "sourceBox": [12, 312, 196, 36],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "8:5552",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "04 · Browser sessions",
+      "destinationPropertiesCaptured": false
+    },
+    {
+      "sourceFrameId": "8:235",
+      "sourceFrameName": "Prototype · 00 New task",
+      "sourceNodeId": "8:10661",
+      "sourceNodeName": "Return to current task",
+      "sourceBox": [12, 458, 196, 68],
+      "reactionIndex": 0,
+      "actionIndex": 0,
+      "trigger": {
+        "type": "ON_CLICK"
+      },
+      "action": {
+        "type": "NODE",
+        "destinationId": "5:5",
+        "navigation": "NAVIGATE",
+        "transition": null,
+        "resetVideoPosition": false,
+        "resetScrollPosition": true,
+        "resetInteractiveComponents": false
+      },
+      "destinationName": "02 · Agent workspace",
+      "destinationPropertiesCaptured": true
+    }
+  ]
+}

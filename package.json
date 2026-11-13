@@ -27,7 +27,10 @@
     "smoke:workflow": "pnpm --filter @pba/worker smoke:workflow",
     "smoke:http": "node scripts/smoke-http.mjs",
     "smoke:pi": "pnpm --filter @pba/agent smoke",
-    "smoke:web": "node scripts/browser.mjs smoke-web"
+    "smoke:web": "node scripts/browser.mjs smoke-web",
+    "test:tasks": "node --test apps/web/src/task-model.test.ts packages/agent/src/index.test.ts packages/policy/src/index.test.ts && node --env-file=.env --test packages/persistence/src/index.test.ts tests/task-loop.test.ts",
+    "test:foundation": "node --test packages/contracts/src/runtime/runtime.test.ts packages/contracts/src/runtime/observation.test.ts tests/fixtures/sites/demo.test.ts",
+    "test:sessions": "node --env-file=.env --test packages/persistence/src/runtime.test.ts tests/runtime-sessions.test.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "2.6.6",

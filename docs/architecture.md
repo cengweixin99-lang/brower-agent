@@ -1,10 +1,18 @@
 # Architecture
 
-web -> api -> Temporal workflow -> activity -> pi agent -> browser-worker gateway -> Playwright
+This file describes the current read-only capture implementation. The proposed general browser Agent architecture and Demo-to-production delivery plan are in [技术架构](technical-architecture.md); proposed capabilities there are not yet implemented.
 
-- apps are independently deployable processes; packages are internal workspace libraries.
-- pi-ai and pi-agent-core are pinned to 1.5.1. This project does not depend on the local pi source checkout.
-- The current worker only runs environmentCheck. Browser task orchestration is not implemented.
-- Browser-worker currently exposes health only. Add authenticated gateway contracts, exclusive leases, policy checks, and an action ledger before exposing browser actions.
-- Activity retry must reconcile uncertain actions instead of repeating external side effects.
-- Provider credentials, cookies, screenshots, and session data must stay out of Git.
+web → api → Temporal workflow → activity → agent gateway client → browser-worker → Playwright
+
+- React uses server snapshots with monotonically increasing versions. No timer synthesizes task progress. URL hashes identify tasks across reloads; pending submission IDs survive refresh in session storage.
+- API persists tasks before dispatch. Nonterminal task rows double as a durable dispatch outbox. A reconciler starts deterministic workflow IDs and detects terminated/failed executions. Client-generated UUIDs make submission retries idempotent.
+- Temporal `executeTask` and `executePausableTask` contain deterministic orchestration only. Activities check the authoritative task state and call the authenticated browser gateway. Read retries reuse committed page checkpoints; uncertain reads may be repeated, but external writes are not supported.
+- PostgreSQL row locks serialize stop, acquisition, source commits and completion. `queued → running → completed/failed`; `queued/running → stopping → stopped`. Terminal states are immutable. A stopped task never accepts another browser action. New tasks additionally support `queued/running → pausing/paused → queued/running`. Pause finishes the in-flight page, then reserves the session without executing another page. Stop wins over pause; a successfully captured final page completes the task.
+- The gateway owns an exclusive advisory lock per database schema and one Personal session execution slot. The lease and action ledger are persisted. After closing the context it commits the captured page and releases the lease; only then can a terminal state be acknowledged. Startup reconciles abandoned in-flight leases and preserves paused session reservations. Losing the ownership connection closes Chromium and exits.
+- Stop is a durable database intent. The gateway checks it every 200 ms and aborts resource requests and the browser context. It remains actionable even when the Temporal worker is unavailable. A queued task without a browser lease can stop immediately. If a gateway is down with an outstanding lease, Stopping remains visible until gateway recovery confirms release.
+- New task rows carry `executionVersion: 2`; separate workflow types preserve replay compatibility with older tasks. Pause waits use deterministic Temporal timers and continue-as-new every 120 polls, keeping history bounded. Paused elapsed time is persisted and excluded from duration.
+- Read-only resource loading pins validated DNS addresses for HTTP(S) requests, revalidates redirects and blocks private networks by default. Page scripts, service workers, uploads, cookies, downloads and non-GET methods are disabled. A narrow `BROWSER_ALLOWED_ORIGINS` override exists for local fixtures. If a local proxy returns only 198.18/15 fake addresses for a hostname, HTTPS DNS at Cloudflare resolves the original hostname to validated public IPv4 addresses; the fake range itself remains blocked.
+- Source text is capped at 30,000 characters per page, each resource at 5 MB, five pages per task. Requests have deadlines. Screenshots are atomically written under `.data/artifacts/<task-id>/` and served only when the corresponding page commit exists.
+- pi-ai and pi-agent-core remain pinned to 1.5.1 for future model integration. The current capture executor makes no model calls and never labels source excerpts as generated research conclusions.
+- Provider credentials, cookies, screenshots, prompts and session data stay out of Git. Local gateway secrets use a mode-0600 file under `.data`; the web client receives no gateway token and has no browser proxy.
+- This release is a local single-user workspace. Production authentication, distributed artifact storage, signed-in browser profiles, approval/publishing and general AI planning remain out of scope.

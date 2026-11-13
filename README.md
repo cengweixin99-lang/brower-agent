@@ -1,76 +1,55 @@
-# Pi Browser Agent
+# Browse Agent
 
-基于 pi 的跨站浏览器 Agent 开发骨架。当前已配置 pnpm workspace、React/Vite 控制台、Fastify 健康接口、Temporal 环境验证流程、PostgreSQL 和 Playwright。
+按 Figma 布局实现的任务控制台，已接通真实网页采集、暂停/继续、停止和刷新恢复。前端 → API → Temporal → activity → browser-worker → Chromium；任务、事件和来源存入 PostgreSQL，截图存入 `.data/artifacts`。
 
-## 环境
+## 开发环境
 
-- Node 24.22.1（支持 Node 24.12 及以上的 24.x）
-- pnpm 11.25.0
-- Docker Desktop，使用 Linux containers
+使用 **Node 24（24.12 及以上的 24.x）和 pnpm 11.25.0**，启动 Docker Desktop。直接依赖固定版本，生命周期脚本默认禁用。
 
-直接依赖固定版本，安装脚本默认禁用。此项目独立于 E:\workspace\pi。
-
-## 首次准备
-
-```powershell
-cd E:\pi-browser-agent
+```sh
 pnpm install --ignore-scripts --frozen-lockfile
 pnpm env:init
 pnpm browser:install
 pnpm infra:up
-```
-
-首次初始化已生成 .env，数据库使用随机本地密码。不要提交 .env。浏览器安装是显式命令，不依赖 npm 生命周期脚本。浏览器缓存位于项目的 .data/browsers，下载和浏览器临时文件位于 .data/tmp，均保存在 E 盘。使用完整 Chromium 的 headless 模式，不额外下载 Headless Shell。
-
-## 启动
-
-```powershell
-pnpm infra:up
 pnpm dev
 ```
 
-| 服务               | 地址                          |
-| ------------------ | ----------------------------- |
-| Web                | http://127.0.0.1:5173         |
-| API 健康检查       | http://127.0.0.1:3100/healthz |
-| 浏览器服务健康检查 | http://127.0.0.1:3101/healthz |
-| Temporal UI        | http://127.0.0.1:8233         |
-| Temporal gRPC      | 127.0.0.1:7233                |
-| PostgreSQL         | 127.0.0.1:55433               |
+访问 [任务控制台](http://127.0.0.1:5173)。数据库密码由 `env:init` 随机生成；服务间凭据自动生成到 `.data/gateway-token`（仅本机开发），均不会提交 Git。浏览器安装为显式命令，使用 `.data/browsers` 中的完整 Chromium。
 
-所有服务仅用于本机开发。健康接口只表示进程在线，不代表浏览器任务功能已完成。
+| 服务          | 地址                  |
+| ------------- | --------------------- |
+| Web           | http://127.0.0.1:5173 |
+| API           | http://127.0.0.1:3100 |
+| 浏览器网关    | http://127.0.0.1:3101 |
+| Temporal UI   | http://127.0.0.1:8233 |
+| Temporal gRPC | 127.0.0.1:7233        |
+| PostgreSQL    | 127.0.0.1:55433       |
+
+## 使用
+
+1. 输入任务描述和 **1–5 个明确的 HTTP(S) 页面网址**，点击 Run Task。例如：`Capture the text and headings from https://example.com`。
+2. 查看真实活动日志、已采集页面截图和正文。每个页面成功采集后保存进度。
+3. 新建任务支持 Pause：当前页面保存后进入 Paused，保留会话占用；Resume 从下一张未完成页面继续。暂停期间耗时冻结，刷新或重启服务也不会自动继续。
+4. 点击 Stop，确认后进入 Stopping；浏览器实际关闭、释放执行槽后显示 Stopped。已完成的页面和报告可下载，停止后的任务不会继续或重新运行。
+5. 刷新或重新打开 `#task/<id>` 恢复服务器状态。历史列表按创建时间倒序显示，每页 8 条。重复提交同一请求 ID 不会创建重复任务。
+
+本轮是**只读网页采集闭环**，不会调用付费模型。报告是网页原文摘录，不是 AI 分析或推荐。页面 JavaScript、登录态和写操作禁用；需要登录或 JavaScript 的站点可能采集失败或内容不完整。追问、附件、模型总结、定时任务、多会话和 Notion 发布在界面中明确标记为未开放。
+
+任务不是存在浏览器内存里的演示数据。停止本地服务会中断执行；重新启动服务后，Temporal 和数据库记录用于恢复。截图依赖本地 `.data/artifacts`，需与数据库一起备份。
 
 ## 验证
 
-```powershell
+```sh
 pnpm check
-pnpm smoke:pi
-pnpm smoke:browser
-pnpm smoke:infra
+pnpm test:tasks
+pnpm --filter @pba/web exec vite build
 # 以下检查需要 pnpm dev 正在运行
-pnpm smoke:workflow
-pnpm smoke:http
 pnpm smoke:web
+pnpm smoke:workflow
 ```
 
-这些检查不调用付费模型。浏览器检查使用本地内存页面，流程检查只执行环境诊断 activity。
+`test:tasks` 要求数据库和 Temporal 已启动，会自行启动隔离的 API、浏览器网关、worker、Vite 和本地快/慢网页。使用独立数据库 schema、任务队列和端口（33100、33101、5174），不调用模型、不访问付费服务。覆盖真实采集、幂等提交、暂停/继续及会话占用、停止确认/取消、后期停止、部分结果保留、刷新/历史一致性、API/worker/gateway 重启和失败状态。测试日志、截图都在被忽略的 `.data` 内。
 
-## 目录
+Ctrl+C 停止开发进程。`pnpm infra:down` 停止基础设施并保留数据卷。应用仅用于本机开发；尚未实现多用户认证和生产部署。
 
-- apps/web：开发控制台。
-- apps/api：用户 API 入口，目前提供健康检查。
-- apps/worker：Temporal workflow 和 activity。
-- apps/browser-worker：浏览器服务入口，目前提供健康检查。
-- packages/agent：pi 运行时与工具适配扩展位置。
-- packages/browser：Playwright 与浏览器验证脚本。
-- packages/contracts、policy、credentials、persistence、telemetry：协议、策略、凭据、存储、观测。
-- evals、tests：能力评测和跨服务测试目录。
-- infra/local：本地数据库与 Temporal。
-
-## 当前边界
-
-这是开发环境初始化，不是可投产的浏览器 Agent。业务任务循环、受控浏览器 RPC、动作账本、审批、账号隔离、人工接管、生产部署均待实现。没有配置模型密钥，也不会自动向模型发送请求。
-
-Ctrl+C 停止开发进程。运行 pnpm infra:down 停止本地基础设施并保留数据卷。
-
-初始化验证记录见 [docs/environment-validation.md](docs/environment-validation.md)。
+实现细节见 [任务执行说明](docs/task-execution.md)、[架构](docs/architecture.md)。Figma 原始参数保存在 `docs/figma/`；本轮插件额度受限，沿用已保存的参数、字体和图标，没有重新声称核实全部设计画板。
