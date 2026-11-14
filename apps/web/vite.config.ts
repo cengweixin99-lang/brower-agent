@@ -11,10 +11,6 @@ export default defineConfig(({ mode }) => {
           target: `http://127.0.0.1:${env.API_PORT ?? "3100"}`,
           rewrite: (path) => path.replace(/^\/api/, ""),
         },
-        "/browser": {
-          target: `http://127.0.0.1:${env.BROWSER_PORT ?? "3101"}`,
-          rewrite: (path) => path.replace(/^\/browser/, ""),
-        },
       },
     },
   };
